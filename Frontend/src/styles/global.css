@@ -1,0 +1,16 @@
+:root {
+  --color-primary: #4f46e5;
+  --color-bg: #ffffff;
+  --color-text: #111827;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.btn { padding: 0.5rem 1rem; border: none; background: var(--color-primary); color: white; border-radius: 6px; cursor: pointer; }

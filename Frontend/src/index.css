@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #137fec;
+
+  --color-bg-main: var(--main-bg);
+  --color-bg-card: var(--card-bg);
+  --color-text-main: var(--main-text);
+  --color-text-muted: var(--muted-text);
+  --color-border-main: var(--main-border);
+
+  --font-display: "Inter", sans-serif;
+
+  --radius-default: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+}
+
+@layer base {
+  :root {
+    --main-bg: #f6f7f8;
+    --card-bg: #ffffff;
+    --main-text: #101922;
+    --muted-text: #64748b;
+    --main-border: #e2e8f0;
+    
+    /* Priority Colors (Light Mode) */
+    --priority-high: #ef4444;       /* Red 500 */
+    --priority-medium: #3b82f6;     /* Blue 500 (Brighter for light theme) */
+    --priority-low: #64748b;        /* Slate 500 */
+    
+    color-scheme: light;
+  }
+
+  :root.dark {
+    --main-bg: #101922;
+    --card-bg: #1a222c;
+    --main-text: #f6f7f8;
+    --muted-text: #94a3b8;
+    --main-border: #1e293b;
+    
+    /* Priority Colors (Dark Mode) */
+    --priority-high: #b91c1c;       /* Red 700 - Darker/Richer */
+    --priority-medium: #1d4ed8;     /* Blue 700 */
+    --priority-low: #334155;        /* Slate 700 */
+    
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--main-bg);
+    color: var(--main-text);
+    font-family: var(--font-display);
+    @apply transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
