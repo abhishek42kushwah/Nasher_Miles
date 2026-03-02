@@ -16,7 +16,7 @@ const Sidebar = ({ isCollapsed, setIsCollapsed, isMobile = false }) => {
         { icon: 'calendar_month', label: 'Attendance', path: '/attendance' },
         { icon: 'payments', label: 'Salary', path: '/salary' },
         { icon: 'person', label: 'Profile', path: '/profile' },
-        { icon: 'folder_open', label: 'FMS', path: '/fms' },
+       
         { icon: 'checklist', label: 'TODO', path: '/todo' },
         { icon: 'assignment_ind', label: 'Delegation', path: '/delegation' },
         { icon: 'check_box', label: 'Checklist', path: '/checklist' },
